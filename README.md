@@ -40,12 +40,16 @@
 - 애초에 이런 일이 생기지않도록 README는 VS에서 수정하고, VS키기전에 터미널에서 깃헙이랑 맥 내용 동기화부터 시키자
 
 
+## 5/5
+1. github이랑 mac 동기화가 안됐을때
+- uvicorn main:app --reload 치기 전에 git pull origin main으로 동기화시키기
+- uvicorn은 vs로 코드를 수정한게 바로 브라우저로 이어지도록 하는 서버인데, 터미널은 한개의 서버만 처리할 수 있어서, uvicorn 서버가 켜져있는동안 다른 명령 동기화 같은건 들을 수가 없음
+- uvicorn으로 서버를 먼저 켰다면, 터미널을 종료해서 git pull origin main을 한 뒤 다시 uvicorn 서버를 키거나, 혹은 command+T로 새 터미널창을 열거나 두가지임
+- main.py 옆에 M이 뜨고 글씨가 노란색이 되는건, modified라는 의미. 나중에 잊지말고 github에 푸시하라는 알림
 
-
-
-
-
-
-
-
-
+2. 
+- @app.get("/items/{item_id}") -> 숫자를 get하겠다
+- def read_item(item_id: int): 
+- return {"id": item_id, "message": "~~"} -> read_item이라는 함수는 item_id를 int로 받고 그 item_id랑 message에 있는걸 return한다.
+- http://127.0.0.1:8000/items/12345 를 치면 item_id가 12345로 나옴. 사이트주소
+- 참고로 127.0.0.1은 전세계 모든 컴퓨터가 자기 자신을 부를 때 쓰는 약속
