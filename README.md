@@ -19,7 +19,7 @@
 - Terminal에서 Control+C로 잠깐 서버 종료 (터미널 앱을 종료하는게 아니라서 다시 켜도 여전히 venv, python_ME 안에 있음)
 - git add .
 - git commit -m "메시지"
-- git push
+- git push origin main
 - 위 3가지를 진행하면 수정본이 github에 업로드된다!
 
 ## 5/1 FastAPI 구조와 Git 트러블슈팅
@@ -40,7 +40,7 @@
 - 애초에 이런 일이 생기지않도록 README는 VS에서 수정하고, VS키기전에 터미널에서 깃헙이랑 맥 내용 동기화부터 시키자
 
 
-## 5/5
+## 5/5 동기화 & 브라우저에 함수 추가
 1. github이랑 mac 동기화가 안됐을때
 - uvicorn main:app --reload 치기 전에 git pull origin main으로 동기화시키기
 - uvicorn은 vs로 코드를 수정한게 바로 브라우저로 이어지도록 하는 서버인데, 터미널은 한개의 서버만 처리할 수 있어서, uvicorn 서버가 켜져있는동안 다른 명령 동기화 같은건 들을 수가 없음
